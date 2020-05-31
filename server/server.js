@@ -40,3 +40,8 @@ app.post('/calc', (req, res) => {
     res.sendStatus(400);
   }
 });
+
+// app.delete('/calc', (req, res) => {
+//   console.log('Calculation history cleared successfully!');
+//   res = [];
+// });
