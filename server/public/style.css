@@ -1,11 +1,17 @@
 body {
   background-color: black;
-  color: lime;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
 }
 
 input {
   border: 3px solid white;
   border-radius: 3px;
+  width: 125px;
 }
 
 button {
