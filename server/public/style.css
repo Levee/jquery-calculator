@@ -1,4 +1,19 @@
 body {
   background-color: black;
-  color: chartreuse;
+  color: lime;
+}
+
+input {
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
+button {
+  border: 3px solid #efefef;
+  border-radius: 3px;
+}
+
+input:focus, button:focus {
+  border: 3px solid lime;
+  outline: none;
 }

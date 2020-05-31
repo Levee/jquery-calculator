@@ -14,18 +14,19 @@
   </div>
   <div id="calc">
     <input id="num1" placeholder="First number" type="number"/>
-    <button id="add">+</button>
-    <button id="sub">-</button>
-    <button id="mul">*</button>
-    <button id="div">/</button>
+    <button id="add" class="operator">+</button>
+    <button id="sub" class="operator">-</button>
+    <button id="mul" class="operator">x</button>
+    <button id="div" class="operator">/</button>
     <input id="num2" placeholder="Second number" type="number"/>
-    <button id="out">=</button>
+    <button id="equals">=</button>
     <button id="clear">c</button>
   </div>
   <div id="result">
-    <h2 id="answer"></h2>
+    <h2>Answer: <span id="answer"></span></h2>
   </div>
   <div>
+    <h2>Calculation History:</h2>
     <ul id="history">
       
     </ul>
