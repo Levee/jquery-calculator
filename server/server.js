@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 5353;
 
-const calc = require('./modules/calc.js');
+let calc = require('./modules/calc.js');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('server/public'));
@@ -30,7 +30,9 @@ app.post('/calc', (req, res) => {
   } else if (operator === '*') {
     ans = num1 * num2;
   } else if (operator === '/') {
-    ans = num1 / num2;
+    ans = (num1 / num2).toFixed(4);
+  } else if (operator === '^') {
+    ans = num1 ** num2;
   }
   // if all parameters are valid, send 201 status code, else send 400 status code
   if ((num1 !== undefined) && (num2 !== undefined) && (operator !== undefined)) {
@@ -41,7 +43,7 @@ app.post('/calc', (req, res) => {
   }
 });
 
-// app.delete('/calc', (req, res) => {
-//   console.log('Calculation history cleared successfully!');
-//   res.send(calc.delete);
-// });
+app.delete('/calc', (req, res) => {
+  calc = [];
+  res.sendStatus(204);
+});

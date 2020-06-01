@@ -21,13 +21,20 @@ body {
 
 input {
   border: 3px solid white;
-  border-radius: 3px;
   width: 125px;
 }
 
 button {
   border: 3px solid #efefef;
-  border-radius: 3px;
+}
+
+button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+#add {
+  border: 3px solid lime;
 }
 
 input:focus, button:focus {
@@ -56,6 +63,10 @@ h2 {
   text-indent: -1em;
 }
 
-h2:before {
+h2:before, h1:before {
   content: '> ';
+}
+
+input, button {
+  border-radius: 7px;
 }

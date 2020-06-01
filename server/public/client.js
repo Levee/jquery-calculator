@@ -26,23 +26,30 @@ function ready(){
     $('.operator').css('border', '3px solid #efefef');
     $('#div').css('border', '3px solid lime');
   });
+  $('#pow').on('click', () => {
+    operator = '^';
+    $('.operator').css('border', '3px solid #efefef');
+    $('#pow').css('border', '3px solid lime');
+  });
   $('#clear').on('click', () => {
     $('input').val('');
   });
   setInterval(() => {
     $('#cursor').fadeToggle(200);
   }, 500);
-  // $('#delete').on('click', () => {
-  //   $.ajax({
-  //     method: 'DELETE',
-  //     url: '/calc',
-  //     }).then((res) => {
-  //       console.log('Success!', res);
-  //     }).catch((res) => {
-  //       alert('Request failed. Try again later.');
-  //     }
-  //   );
-  // });
+  $('#delete').on('click', () => {
+    $.ajax({
+      method: 'DELETE',
+      url: '/calc',
+      }).then((res) => {
+        console.log('Success!', res);
+      }).catch((res) => {
+        alert('Request failed. Try again later.');
+      }
+    );
+    $('#history').empty();
+    $('#answer').empty();
+  });
 }
 
 function calc(){

@@ -10,20 +10,21 @@
   <script src="client.js" async defer></script>
 </head>
 <body>
-  <div id="header">
-    <h1>> jQuery Server-Side Calculator<span id="cursor">_</span></h1>
-  </div>
-  <div id="calc">
+  <header>
+    <h1>jQuery Server-Side Calculator<span id="cursor">_</span></h1>
+  </header>
+  <main>
     <input id="num1" placeholder="First number" type="number"/>
     <button id="add" class="operator">+</button>
     <button id="sub" class="operator">-</button>
     <button id="mul" class="operator">*</button>
     <button id="div" class="operator">/</button>
+    <button id="pow" class="operator">^</button>
     <input id="num2" placeholder="Second number" type="number"/>
     <button id="equals">=</button>
     <button id="clear">C</button>
     <button id="delete">CE</button>
-  </div>
+  </main>
   <div id="result">
     <h2>Answer: <span id="answer"></span></h2>
   </div>
