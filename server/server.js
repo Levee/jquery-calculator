@@ -43,5 +43,5 @@ app.post('/calc', (req, res) => {
 
 // app.delete('/calc', (req, res) => {
 //   console.log('Calculation history cleared successfully!');
-//   res = [];
+//   res.send(calc.delete);
 // });

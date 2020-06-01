@@ -1,11 +1,22 @@
+html {
+  background-color: #333;
+}
+
 body {
+  margin: 15px;
+  padding: 15px;
   background-color: black;
   background-image: radial-gradient(
     rgba(0, 150, 0, 0.75), black 120%
   );
   color: white;
-  font: 1.3rem Inconsolata, monospace;
+  font-family: 'VT323', monospace;
   text-shadow: 0 0 5px #C8C8C8;
+  border-radius: 15px;
+  border: 7px solid #222;
+  box-shadow:
+    0 0 0 15px #333,
+    inset 0px 0px 5px 5px #000;
 }
 
 input {
@@ -22,4 +33,29 @@ button {
 input:focus, button:focus {
   border: 3px solid lime;
   outline: none;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li {
+  font-size: 1.5em;
+}
+
+li:before {
+  content: '> ';
+}
+
+h2 {
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+h2:before {
+  content: '> ';
 }

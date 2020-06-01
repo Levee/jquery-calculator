@@ -29,6 +29,9 @@ function ready(){
   $('#clear').on('click', () => {
     $('input').val('');
   });
+  setInterval(() => {
+    $('#cursor').fadeToggle(200);
+  }, 500);
   // $('#delete').on('click', () => {
   //   $.ajax({
   //     method: 'DELETE',
