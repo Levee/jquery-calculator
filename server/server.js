@@ -31,7 +31,7 @@ app.post('/calc', (req, res) => {
   } else if (operator === '*') {
     ans = num1 * num2;
   } else if (operator === '/') {
-    ans = (num1 / num2).toFixed(4);
+    ans = (num1 / num2);
   } else if (operator === '^') {
     ans = num1 ** num2;
   }
