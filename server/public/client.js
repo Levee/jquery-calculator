@@ -79,7 +79,7 @@ function calc(){
       alert('Request failed. Try again later.');
     }
   );
-
+  $('#num1, #num2').val('');
   refreshHistory();
 }
 

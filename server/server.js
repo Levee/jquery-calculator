@@ -31,9 +31,12 @@ app.post('/calc', (req, res) => {
   } else if (operator === '*') {
     ans = num1 * num2;
   } else if (operator === '/') {
-    ans = (num1 / num2);
+    ans = num1 / num2;
   } else if (operator === '^') {
     ans = num1 ** num2;
+  }
+  if(Number.isInteger(ans) === false){
+    ans = ans.toFixed(4);
   }
   // if all parameters are valid, send 201 status code, else send 400 status code
   if ((num1 !== undefined) && (num2 !== undefined) && (operator !== undefined)) {
