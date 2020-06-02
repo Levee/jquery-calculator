@@ -80,23 +80,7 @@ function calc(){
     }
   );
 
-  $.ajax({
-    method: 'GET',
-    url: '/calc',
-    }).then((res) => {
-      console.log('Success!', res);
-      $('#answer').text(res[res.length - 1].ans);
-      $('#history').empty();
-      $('input').val('');
-      for(let i = res.length - 1; i >= 0; i--){
-        $('#history').append(`
-          <li>${res[i].num1} ${res[i].operator} ${res[i].num2} = ${res[i].ans}</li>
-        `);
-      }
-    }).catch((res) => {
-      alert('Request failed. Try again later.');
-    }
-  );
+  refreshHistory();
 }
 
 function refreshHistory(){
