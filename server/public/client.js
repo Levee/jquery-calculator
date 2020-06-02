@@ -75,12 +75,12 @@ function calc(){
     data: calcObj,
     }).then((res) => {
       console.log('Success!', res);
+      $('#num1, #num2').val('');
+      refreshHistory();
     }).catch((res) => {
       alert('Request failed. Try again later.');
     }
   );
-  $('#num1, #num2').val('');
-  refreshHistory();
 }
 
 function refreshHistory(){
