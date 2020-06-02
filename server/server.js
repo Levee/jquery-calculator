@@ -1,14 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 5353;
 
 let calc = require('./modules/calc.js');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('server/public'));
-app.listen(PORT, () => {
-  console.log('listening on port', PORT)
+
+const port = process.env.PORT || 5353;
+app.listen(port, () => {
+  console.log('listening on port', port);
 });
 
 app.get('/calc', (req, res) => {
