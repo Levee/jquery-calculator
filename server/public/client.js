@@ -57,7 +57,8 @@ function calc(){
   if(!($('#num1').val()) || !($('#num2').val())){
     alert('Error! Inputs must contain a valid number.');
     return;
-  } else if(operator === '/' && $('#num2').val() === 0){
+  }
+  if(operator === '/' && $('#num2').val() === 0){
     alert('Error! Cannot divide by zero.');
     return;
   }
