@@ -84,6 +84,7 @@ function calc(){
 }
 
 function refreshHistory(){
+  $('#history').empty();
   $.ajax({
     method: 'GET',
     url: '/calc',
