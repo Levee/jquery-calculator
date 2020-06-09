@@ -53,7 +53,6 @@ function ready(){
 }
 
 function calc(){
-  console.log('in calc');
   if(!($('#num1').val()) || !($('#num2').val())){
     alert('Error! Inputs must contain a valid number.');
     return;
@@ -75,6 +74,7 @@ function calc(){
     data: calcObj,
     }).then((res) => {
       console.log('Success!', res);
+      $('#answer').text(res.ans);
       $('#num1, #num2').val('');
       refreshHistory();
     }).catch((res) => {

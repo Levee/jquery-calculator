@@ -7,7 +7,7 @@ let calc = require('./modules/calc.js');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('server/public'));
 
-const port = process.env.PORT || 5353;
+const port = process.env.PORT || 3535;
 app.listen(port, () => {
   console.log('listening on port', port);
 });
@@ -40,8 +40,10 @@ app.post('/calc', (req, res) => {
   }
   // if all parameters are valid, send 201 status code, else send 400 status code
   if ((num1 !== undefined) && (num2 !== undefined) && (operator !== undefined)) {
-    calc.push({ num1: num1, num2: num2, operator: operator, ans: ans });
-    res.sendStatus(201);
+    const response = { num1: num1, num2: num2, operator: operator, ans: ans };
+    calc.push(response);
+    res.send(response);
+    res.status(201);
   } else {
     res.sendStatus(400);
   }
